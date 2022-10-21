@@ -33,7 +33,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.IO.Pipelines" />
+    <PackageReference Condition=" '$(DotnetBuildFromSource)' == 'true' " Include="System.IO.Pipelines" />
 
     <PackageReference Include="System.CommandLine" />
     <PackageReference Include="System.CommandLine.Rendering" />
