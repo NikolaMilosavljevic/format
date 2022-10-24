@@ -56,6 +56,16 @@
     <PackageReference Include="Microsoft.Extensions.Logging" />
   </ItemGroup>
 
+  <ItemGroup Condition=" '$(DotnetBuildFromSource)' == 'true' ">
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" />
+    <PackageReference Include="System.Composition.AttributedModel" />
+    <PackageReference Include="System.Composition.Convention" />
+    <PackageReference Include="System.Composition.Hosting" />
+    <PackageReference Include="System.Composition.Runtime" />
+    <PackageReference Include="System.Composition.TypedParts" />
+    <PackageReference Include="System.IO.Pipelines" />
+  </ItemGroup>
+
   <ItemGroup>
     <InternalsVisibleTo Include="dotnet-format.UnitTests" />
     <InternalsVisibleTo Include="dotnet-format.Performance" />

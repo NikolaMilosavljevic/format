@@ -36,4 +36,14 @@
     <PackageVersion Include="System.CommandLine" Version="$(SystemCommandLineVersion)" />
     <PackageVersion Include="System.CommandLine.Rendering" Version="$(SystemCommandLineRenderingVersion)" />
   </ItemGroup>
+
+  <ItemGroup Condition=" '$(DotnetBuildFromSource)' == 'true' ">
+    <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="$(MicrosoftBclAsyncInterfacesPackageVersion)"/>
+    <PackageVersion Include="System.Composition.AttributedModel" Version="$(SystemCompositionAttributedModelPackageVersion)"/>
+    <PackageVersion Include="System.Composition.Convention" Version="$(SystemCompositionConventionPackageVersion)"/>
+    <PackageVersion Include="System.Composition.Hosting" Version="$(SystemCompositionHostingPackageVersion)"/>
+    <PackageVersion Include="System.Composition.Runtime" Version="$(SystemCompositionRuntimePackageVersion)"/>
+    <PackageVersion Include="System.Composition.TypedParts" Version="$(SystemCompositionTypedPartsPackageVersion)"/>
+    <PackageVersion Include="System.IO.Pipelines" Version="$(SystemIOPipelinesPackageVersion)"/>
+  </ItemGroup>
 </Project>
